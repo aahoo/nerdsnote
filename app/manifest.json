@@ -1,0 +1,25 @@
+{
+  "name": "NerdsNote",
+  "short_name": "NerdsNote",
+  "icons": [{
+        "src": "images/icon/icon-128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      }, {
+        "src": "images/icon/icon-152-apple-touch.png",
+        "sizes": "152x152",
+        "type": "image/png"
+      }, {
+        "src": "images/icon/icon-144-ms-touch.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      }, {
+        "src": "images/icon/icon-192-chrome-touch.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }],
+  "start_url": "/index.html?homescreen=1",
+  "display": "standalone",
+  "background_color": "#f2bc40",
+  "theme_color": "#EEAA11"
+}

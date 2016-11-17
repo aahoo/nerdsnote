@@ -1,0 +1,45 @@
+@import 'variables';
+@import 'utilities';
+@import 'github-markdown';
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family     : Helvetica, Arial, sans-serif;
+  font-size       : 16px;
+  background-color: #f2f2f2;
+  margin          : 0;
+  padding         : 0;
+}
+
+#action-bar {
+  position      : fixed;
+  top           : 0;
+  left          : 0;
+  right         : 0;
+  bottom        : 0;
+  pointer-events: none;
+}
+
+#paper {
+  max-width : 672px;
+  box-sizing: border-box;
+  margin    : 61px auto;
+  padding   : 16px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+.medium-editor-toolbar {
+  // max-width: 840px;
+}
+
+.markdown-body a {
+  cursor: pointer;
+}
+
+.medium-editor-element {
+  min-height: 24px;
+}

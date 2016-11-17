@@ -1,0 +1,14 @@
+{
+  "appName": {
+    "message": "Nerds Note: WYSIWYG Markdown stored in URL",
+    "description": "The name of the application"
+  },
+  "appShortName": {
+    "message": "Nerds Note",
+    "description": "The short name of the application"
+  },
+  "appDescription": {
+    "message": "Simple WYSIWYG editor that stores notes in URL as Markdown, can sync to bookmarks",
+    "description": "The description of the application"
+  }
+}
