@@ -83,6 +83,7 @@
         hotstring: new MediumEditor.ext.Hotstring(),
         markdown: new MediumEditor.ext.MeMarkdown(function(md, _this) {
           var firstChild = _this.base.elements[0].firstChild;
+          console.log(firstChild);
           document.title = (firstChild && firstChild.textContent) || 'Note';
           location.hash = '/' + md; // encodeUrl(md);
         })
