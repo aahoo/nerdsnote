@@ -6,8 +6,6 @@ This app is built using [Web Starter Kit](https://github.com/google/web-starter-
 
 There is a minor difference in the gulpfile. `serve:dist` task is renamed to `s` and it has change watches like `serve` task. So use `gulp` for building and `gulp s` for building + serving + developing.
 
-Read [here](https://github.com/yeoman/generator-webapp/blob/master/docs/recipes/gh-pages.md) for deployment to Github pages.
-
 # Open Source Projects used in this app
 
 - The editor is based on [Medium Editor](https://github.com/yabwe/medium-editor)

@@ -3,4 +3,3 @@ dist/
 .tmp
 app.yaml
 deprecated
-.publish
