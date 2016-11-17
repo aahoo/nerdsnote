@@ -1,0 +1,109 @@
+.medium-toolbar-arrow-under:after {
+  top         : 60px;
+  border-color: #999 transparent transparent transparent;
+}
+
+.medium-toolbar-arrow-over:before {
+  top         : -8px;
+  border-color: transparent transparent #999 transparent;
+}
+
+.medium-editor-toolbar {
+  pointer-events: auto;
+  position      : static;
+  overflow-x    : scroll;
+
+  &::-webkit-scrollbar {
+    height: 1px;
+  }
+
+  ul {
+    width    : 840px;
+    min-width: 840px;
+    margin   : 0 auto;
+  }
+
+  li {
+    button {
+      width             : 60px;
+      height            : 60px;
+      border            : none;
+      background-color  : #f2f2f2;
+      color             : #555;
+      -webkit-transition: background-color 0.2s ease-in, color 0.2s ease-in;
+      transition        : background-color 0.2s ease-in, color 0.2s ease-in;
+    }
+
+    &:last-of-type button {
+      border-right: none;
+    }
+
+    button:hover {
+      background-color: #fc0;
+      color           : #111;
+    }
+
+    .medium-editor-button-active {
+      background-color: #ccc;
+      color           : #333;
+    }
+  }
+}
+
+.medium-editor-toolbar-form {
+  margin          : 6px auto 0;
+  align-items     : center;
+  background-color: #666;
+  border-radius   : 24px;
+  max-width       : 400px;
+
+  a {
+    color : #fc0;
+    margin: 0 24px 0 0;
+  }
+
+  .medium-editor-toolbar-input {
+    height     : 48px;
+    background : #666;
+    color      : #fc0;
+    margin-left: 24px;
+    width      : auto;
+    flex       : 1;
+
+    &::-webkit-input-placeholder {
+      color: #ccc;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+.medium-editor-toolbar-form-active {
+  display: flex;
+}
+
+.medium-editor-toolbar-anchor-preview {
+  background: #fff;
+  box-shadow: 0 0 4px rgba(0,0,0,.5);
+  font-size : 14px;
+
+  a {
+    color          : #4078c0;
+    text-decoration: none;
+    margin         : 0;
+    line-height    : 24px;
+    padding        : 0 4px;
+    border-radius  : 3px;
+  }
+}
+
+.medium-editor-anchor-preview {
+  pointer-events: auto;
+}
+
+.medium-editor-anchor-preview-active {
+  z-index: 9999;
+}
+
+.medium-editor-placeholder:after {
+  color: #ccc;
+}
