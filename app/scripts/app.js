@@ -83,12 +83,11 @@
         hotstring: new MediumEditor.ext.Hotstring(),
         markdown: new MediumEditor.ext.MeMarkdown(function(md, _this) {
           var firstChild = _this.base.elements[0].firstChild;
-          console.log(firstChild);
           document.title = (firstChild && firstChild.textContent) || 'Note';
           location.hash = '/' + md; // encodeUrl(md);
         })
         // 'tabIndent': tabIndent, 'code': new MediumButton({label: '` `', start:
-        // '<code>', end: '</code>'}),,,,,,,,,,,,,,,
+        // '<code>', end: '</code>'})
       }
     });
     // var cssLink = document.getElementById('medium-editor-theme');
@@ -106,7 +105,9 @@
     });
     var converter = new showdown.Converter();
     var markdown = decodeUrl(location.hash.substr(location.hash.indexOf('/') + 1));
-    editor.elements[0].innerHTML = converter.makeHtml(markdown);
+    var el = editor.elements[0];
+    el.innerHTML = converter.makeHtml(markdown);
+    document.title = (el.firstChild && el.firstChild.textContent) || 'Note';
   }
   // if (document.body)   init(); else   document.onload = init;
 
