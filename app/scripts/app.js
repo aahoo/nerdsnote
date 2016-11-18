@@ -84,7 +84,7 @@
         markdown: new MediumEditor.ext.MeMarkdown(function(md, _this) {
           var firstChild = _this.base.elements[0].firstChild;
           document.title = (firstChild && firstChild.textContent) || 'Note';
-          location.hash = '/' + md; // encodeUrl(md);
+          location.hash = '//' + md; // encodeUrl(md);
         })
         // 'tabIndent': tabIndent, 'code': new MediumButton({label: '` `', start:
         // '<code>', end: '</code>'})
@@ -104,7 +104,7 @@
       window.location = el.href;
     });
     var converter = new showdown.Converter();
-    var markdown = decodeUrl(location.hash.substr(location.hash.indexOf('/') + 1));
+    var markdown = decodeUrl(location.hash.substr(location.hash.indexOf('//') + 2));
     var el = editor.elements[0];
     el.innerHTML = converter.makeHtml(markdown);
     document.title = (el.firstChild && el.firstChild.textContent) || 'Note';
