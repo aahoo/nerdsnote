@@ -11,8 +11,8 @@
       link.id = id;
     document.getElementsByTagName('head')[0].appendChild(link);
   }
-  linkCss('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css');
-  linkCss('//cdn.jsdelivr.net/medium-editor/5.22.1/css/medium-editor.min.css');
+  linkCss('https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css');
+  linkCss('https://cdn.jsdelivr.net/medium-editor/5.22.1/css/medium-editor.min.css');
   let getPath = path =>
   (location.href.indexOf('data:text/html') == 0 ? 'https://nerdsnote.com/' : '') + path;
   linkCss(getPath('styles/theme.css'), 'medium-editor-theme');
