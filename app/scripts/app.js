@@ -13,8 +13,9 @@
   }
   linkCss('https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css');
   linkCss('https://cdn.jsdelivr.net/medium-editor/5.22.1/css/medium-editor.min.css');
-  let getPath = path =>
-  (location.href.indexOf('data:text/html') == 0 ? 'https://nerdsnote.com/' : '') + path;
+  let getPath = path => (location.href.indexOf('data:text/html') == 0
+    ? 'https://nerdsnote.com/'
+    : '') + path;
   linkCss(getPath('styles/theme.css'), 'medium-editor-theme');
   linkCss(getPath('styles/main.css'));
 
@@ -68,6 +69,9 @@
         static: true,
         updateOnEmptySelection: true
       },
+      anchor: {
+        linkValidation: true
+      },
       anchorPreview: {
         previewValueSelector: 'a',
         hideDelay: 500,
@@ -92,8 +96,8 @@
     });
     // var cssLink = document.getElementById('medium-editor-theme');
     // document.getElementById('sel-themes').addEventListener('change', function() {
-    //   cssLink.href = '../bower_components/medium-editor/dist/css/' + this.value +
-    //     '.css'; }); opens links; this is somehow not possible in the default
+    //   cssLink.href = '../bower_components/medium-editor/dist/css/' + this.value
+    // +     '.css'; }); opens links; this is somehow not possible in the default
     // behavior!
     document.querySelector('.markdown-body').addEventListener('click', function(e) {
       var el = e.target;
@@ -105,6 +109,9 @@
     });
     var converter = new showdown.Converter();
     var markdown = decodeUrl(location.hash.substr(location.hash.indexOf('//') + 2));
+    markdown = markdown.replace(/(\[.*?\]\()(.+?)(\))/gm, function(match, p1, p2, p3) {
+      return p1 + p2.split('"').join('%22') + p3;
+    });
     var el = editor.elements[0];
     el.innerHTML = converter.makeHtml(markdown);
     document.title = (el.firstChild && el.firstChild.textContent) || 'Note';

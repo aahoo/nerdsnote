@@ -3,7 +3,7 @@
   "author": "Hamed Khademi",
   "name": "__MSG_appName__",
   "short_name": "__MSG_appShortName__",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -12,7 +12,7 @@
   },
   "background": {
     "scripts": ["bg.js"],
-    "persistent": false
+    "persistent": true
   },
   "browser_action": {
     "default_icon": {
